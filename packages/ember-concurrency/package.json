@@ -19,17 +19,19 @@
     "start:js": "rollup --config --watch --no-watch.clearScreen",
     "start:types": "glint --declaration --watch",
     "test": "echo 'Addon does not have tests, run tests in test-app'",
-    "prepare": "pnpm build"
+    "prepack": "pnpm build"
   },
   "peerDependencies": {
-    "ember-source": "^3.28.0 || ^4.0.0 || >=5.0.0",
-    "@glimmer/tracking": "^1.1.2",
     "@glint/template": ">= 1.0.0"
   },
   "peerDependenciesMeta": {
     "@glint/template": {
       "optional": true
     }
+  },
+  "resolutions": {
+    "ember-source": "^3.28.0 || ^4.0.0 || >=5.0.0",
+    "@glimmer/tracking": "^1.1.2"
   },
   "engines": {
     "node": "16.* || >= 18"
@@ -58,7 +60,9 @@
     "prettier": "^3.1.0",
     "rollup": "^4.9.6",
     "rollup-plugin-copy": "^3.5.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "@glimmer/tracking": "^1.1.2",
+    "ember-source":"^4.0.1"
   },
   "files": [
     "addon-main.cjs",
